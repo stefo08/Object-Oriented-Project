@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="413.0" prefWidth="853.0" style="-fx-background-color: #005c99;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.View.FrontController.HomeController">
+   <children>
+      <AnchorPane layoutX="14.0" layoutY="22.0" prefHeight="372.0" prefWidth="191.0" style="-fx-background-color: #003366; -fx-background-radius: 15 15 15 15;">
+         <children>
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="11.0" layoutY="140.0">
+               <image>
+                  <Image url="@../../Images/Home%20image/icons8_Upload_to_the_Cloud_24px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="12.0" layoutY="264.0">
+               <image>
+                  <Image url="@../../Images/Home%20image/icons8_Pencil_24px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="11.0" layoutY="99.0">
+               <image>
+                  <Image url="@../../Images/Home%20image/icons8_Search_24px_3.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="11.0" layoutY="181.0">
+               <image>
+                  <Image url="@../../Images/Home%20image/icons8_Page_24px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="11.0" layoutY="222.0">
+               <image>
+                  <Image url="@../../Images/Home%20image/icons8_Check_File_24px.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="23.0" layoutX="12.0" layoutY="304.0">
+               <image>
+                  <Image url="@../../Images/Home%20image/icons8_Tasklist_24px.png" />
+               </image>
+            </ImageView>
+            <JFXButton contentDisplay="CENTER" layoutX="11.0" layoutY="14.0" onAction="#InfoUT" opacity="0.87" prefHeight="54.0" prefWidth="53.0" ripplerFill="BLACK" style="-fx-background-color: transparent; -fx-border-fill: transparent; -fx-text-fill: transparent; -fx-background-radius: 100 100 100 100;" textFill="WHITE">
+               <graphic>
+                  <ImageView>
+                     <image>
+                        <Image url="@../../Images/icons8_Male_User_52px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton layoutX="1.0" layoutY="90.0" onAction="#RicercaOP" prefHeight="41.0" prefWidth="237.0" text="RICERCA OPERA" textFill="WHITE" />
+            <JFXButton layoutY="131.0" onAction="#UploadOpera" prefHeight="41.0" prefWidth="237.0" text="UPLOAD OPERA" textFill="WHITE" />
+            <JFXButton layoutY="172.0" onAction="#getOpereUploaderPage" prefHeight="41.0" prefWidth="237.0" text="INSERISCI PAGINE" textFill="WHITE" />
+            <Label fx:id="nomeus" layoutX="98.0" layoutY="27.0" prefHeight="17.0" prefWidth="112.0" text="Nome" textFill="WHITE" />
+            <Label fx:id="ruolo" layoutX="13.0" layoutY="350.0" prefHeight="17.0" prefWidth="162.0" text="Ruolo :" textFill="WHITE" />
+            <Hyperlink layoutX="94.0" layoutY="51.0" onAction="#Logout" prefHeight="23.0" prefWidth="57.0" text="Logout" />
+            <JFXButton layoutY="255.0" onAction="#OpenOperaTrabscrive" prefHeight="41.0" prefWidth="237.0" text="TRASCRIZIONA OPERA" textFill="WHITE" />
+            <JFXButton layoutX="1.0" layoutY="213.0" onAction="#getOperetoReview" prefHeight="41.0" prefWidth="237.0" text="REVISIONA SCANSIONI" textFill="WHITE" />
+            <JFXButton layoutY="295.0" prefHeight="41.0" prefWidth="237.0" text="REVISIONA TRASCRIZIONE" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="homeview" layoutX="245.0" prefHeight="413.0" prefWidth="577.0" style="-fx-background-color: #005c99;" AnchorPane.bottomAnchor="0.0" AnchorPane.rightAnchor="-1.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <ImageView fitHeight="346.0" fitWidth="456.0" layoutX="52.0" layoutY="67.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../../Images/Home%20image/teaser_illustration.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="Welcome" layoutX="27.0" layoutY="29.0" prefHeight="30.0" prefWidth="401.0" text="BENVENUTO NEL PORTALE" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="148.0" fitWidth="139.0" layoutX="417.0" layoutY="14.0">
+               <image>
+                  <Image url="@../../Images/UnivAq-Universita-de-LAquila.png" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="24.0" fitWidth="24.0" layoutX="391.0" layoutY="209.0">
+               <image>
+                  <Image url="@../../Images/Home%20image/icons8_Facebook_24px_1.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="428.0" layoutY="207.0" prefHeight="27.0" prefWidth="149.0" text="facebook.com/univaq.it/" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="391.0" layoutY="240.0">
+               <image>
+                  <Image url="@../../Images/Home%20image/icons8_Instagram_24px_2.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="426.0" layoutY="239.0" prefHeight="27.0" prefWidth="149.0" text="instagram/qualcosa" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <ImageView layoutX="391.0" layoutY="274.0">
+               <image>
+                  <Image url="@../../Images/Home%20image/icons8_Website_24px_3.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="426.0" layoutY="272.0" prefHeight="27.0" prefWidth="149.0" text="http://www.univaq.it/" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <ImageView layoutX="391.0" layoutY="305.0">
+               <image>
+                  <Image url="@../../Images/Home%20image/icons8_Email_24px_1.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="426.0" layoutY="303.0" prefHeight="27.0" prefWidth="149.0" text="progettoOO@libero.it" textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+            <Label layoutX="393.0" layoutY="172.0" prefHeight="27.0" prefWidth="149.0" text="Contatti: " textFill="WHITE">
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

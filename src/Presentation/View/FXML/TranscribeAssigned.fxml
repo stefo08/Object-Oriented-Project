@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="413.0" prefWidth="594.0" style="-fx-background-color: #005c99;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.View.FrontController.TranscribeAssignedController">
+   <children>
+      <AnchorPane layoutX="21.0" layoutY="26.0" prefHeight="366.0" prefWidth="555.0" style="-fx-background-color: #003366; -fx-background-radius: 15 15 15 15;">
+         <children>
+            <TableView fx:id="pagetable" layoutX="36.0" layoutY="54.0" prefHeight="241.0" prefWidth="483.0" style="-fx-text: nes;">
+               <columns>
+                  <TableColumn fx:id="titleop" prefWidth="368.0" text="Titolo Opera" />
+                  <TableColumn fx:id="numpage" prefWidth="114.0" text="#Pagina" />
+               </columns>
+            </TableView>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="372.0" layoutY="307.0" onAction="#TranscribePage" prefHeight="31.0" prefWidth="147.0" style="-fx-background-color: #809fff;" text="TRASCRIVI PAGINA" textFill="WHITE" />
+            <Label layoutX="201.0" layoutY="14.0" text="OPERE ASSEGNATE" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

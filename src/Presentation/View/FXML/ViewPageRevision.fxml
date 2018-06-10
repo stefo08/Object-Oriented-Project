@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="383.0" prefWidth="494.0" style="-fx-background-color: #005c99;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.View.FrontController.ViewPageRevisionController">
+   <children>
+      <Pane layoutX="14.0" layoutY="32.0" prefHeight="319.0" prefWidth="268.0" style="-fx-background-color: #003366; -fx-background-radius: 15 15 15 15;">
+         <children>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="144.0" layoutY="279.0" onAction="#GetNextPage" prefHeight="32.0" prefWidth="23.0" style="-fx-background-color: #809fff;" text="ACCETTA PAGINA" textFill="WHITE">
+               <graphic>
+                  <ImageView fx:id="operaimage1" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../../Images/AcceptView/icons8_Right_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="78.0" layoutY="279.0" onAction="#GetPrecPage" prefHeight="32.0" prefWidth="23.0" style="-fx-background-color: #809fff;" textFill="WHITE">
+               <graphic>
+                  <ImageView fx:id="operaimage11" fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../../Images/AcceptView/icons8_Left_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Label fx:id="numpagelab" layoutX="49.0" layoutY="14.0" prefHeight="21.0" prefWidth="160.0" text="Pagina " textFill="WHITE" />
+            <Pane layoutX="49.0" layoutY="42.0" prefHeight="222.0" prefWidth="170.0" style="-fx-background-color: #005c99;">
+               <children>
+                  <ImageView fx:id="operaimage" fitHeight="208.0" fitWidth="153.0" layoutX="9.0" layoutY="8.0" pickOnBounds="true" smooth="false" />
+               </children>
+            </Pane>
+         </children></Pane>
+      <Label layoutX="160.0" layoutY="4.0" text="REVISIONA LE SCANSIONI" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Pane layoutX="296.0" layoutY="229.0" prefHeight="123.0" prefWidth="184.0" style="-fx-background-color: #003366; -fx-background-radius: 15 15 15 15;">
+         <children>
+            <JFXButton layoutX="22.0" layoutY="14.0" onAction="#AcceptPage" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #809fff;" text="ACCETTA PAGINA" textFill="WHITE" />
+            <JFXButton layoutX="22.0" layoutY="70.0" onAction="#RefusePage" prefHeight="25.0" prefWidth="140.0" style="-fx-background-color: #809fff;" text="RIFIUTA PAGINA" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Pane layoutX="296.0" layoutY="32.0" prefHeight="184.0" prefWidth="184.0" style="-fx-background-color: #003366; -fx-background-radius: 15 15 15 15;" />
+   </children>
+</AnchorPane>

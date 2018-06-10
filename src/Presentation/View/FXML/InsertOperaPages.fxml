@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="413.0" prefWidth="594.0" style="-fx-background-color: #005c99;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.View.FrontController.InsertOperaPagesController">
+   <children>
+      <Pane layoutX="21.0" layoutY="26.0" onDragDetected="#CloseOperaUpload" prefHeight="366.0" prefWidth="555.0" style="-fx-background-color: #003366; -fx-background-radius: 15 15 15 15;">
+         <children>
+            <Label layoutX="192.0" layoutY="14.0" text="INSERISCI PAGINE OPERA" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="21.0" layoutY="35.0" text="Opere inserite nel sistema:" textFill="WHITE" />
+            <TableView fx:id="opereUP" layoutX="21.0" layoutY="61.0" onKeyPressed="#SetCopertina" onKeyReleased="#SetCopertina" onMouseClicked="#SetCopertina" prefHeight="290.0" prefWidth="355.0">
+               <columns>
+                  <TableColumn fx:id="titoloUp" prefWidth="160.0" text="Titolo" />
+                  <TableColumn fx:id="numpageUP" prefWidth="225.0" text="#Pagine inserite" />
+               </columns>
+            </TableView>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="393.0" layoutY="245.0" onAction="#InsertPage" prefHeight="31.0" prefWidth="147.0" style="-fx-background-color: #809fff; -fx-prompt-text-fill: transparent; -fx-text: 15px;" text="INSERISCI PAGINE&#10;&#10;" textFill="WHITE" />
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="394.0" layoutY="292.0" onAction="#CloseUpload" prefHeight="31.0" prefWidth="147.0" style="-fx-background-color: #809fff; -fx-prompt-text-fill: transparent; -fx-text: 15px;" text="CHIUDI UPLOAD&#10;&#10;&#10;" textFill="WHITE" />
+            <Pane layoutX="395.0" layoutY="59.0" prefHeight="170.0" prefWidth="140.0" style="-fx-background-color: #005c99;">
+               <children>
+                  <ImageView fx:id="copertina" fitHeight="158.0" fitWidth="127.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../Images/0401_empty_Darrel_Austin.jpg" />
+                     </image></ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="395.0" layoutY="35.0" text="Copertina:" textFill="WHITE" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

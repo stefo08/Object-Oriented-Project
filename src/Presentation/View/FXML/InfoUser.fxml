@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="413.0" prefWidth="594.0" style="-fx-background-color: #005c99;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.View.FrontController.InfoUserController">
+   <children>
+      <Pane layoutX="21.0" layoutY="26.0" prefHeight="366.0" prefWidth="555.0" style="-fx-background-color: #003366; -fx-background-radius: 15 15 15 15;">
+         <children>
+            <Label fx:id="namelab" layoutX="158.0" layoutY="45.0" prefHeight="41.0" prefWidth="228.0" text="NOME E COGNOME UTENTE" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <Label layoutX="58.0" layoutY="199.0" prefHeight="25.0" prefWidth="228.0" text="Età: " textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label layoutX="58.0" layoutY="224.0" prefHeight="25.0" prefWidth="392.0" text="Nazionalità:" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="mailab" layoutX="58.0" layoutY="174.0" prefHeight="25.0" prefWidth="392.0" text="Email: " textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <Label fx:id="userlab" layoutX="58.0" layoutY="149.0" prefHeight="25.0" prefWidth="392.0" text="Username:" textFill="WHITE">
+               <font>
+                  <Font size="16.0" />
+               </font>
+            </Label>
+            <ImageView fitHeight="89.0" fitWidth="93.0" layoutX="58.0" layoutY="45.0">
+               <image>
+                  <Image url="@../../Images/generic-user-purple.png" />
+               </image>
+            </ImageView>
+            <JFXButton fx:id="richiesta1" layoutX="58.0" layoutY="300.0" onAction="#ViewRequest" prefHeight="41.0" prefWidth="248.0" style="-fx-background-color: #809fff;" text="VISUALIZZA RICHIESTA COLLABORAZIONE" textFill="WHITE" />
+            <JFXButton fx:id="richiesta" layoutX="58.0" layoutY="300.0" onAction="#RichiestaColl" prefHeight="41.0" prefWidth="228.0" style="-fx-background-color: #809fff;" text="RICHIESTA COLLABORAZIONE" textFill="WHITE" />
+            <JFXButton fx:id="viewusers" layoutX="319.0" layoutY="300.0" onAction="#ViewSystemUsers" prefHeight="41.0" prefWidth="215.0" style="-fx-background-color: #809fff;" text="ELENCO UTENTI" textFill="WHITE" />
+            <JFXButton fx:id="assegnatrasc" layoutX="319.0" layoutY="300.0" onAction="#AssignOpera" prefHeight="41.0" prefWidth="215.0" style="-fx-background-color: #809fff;" text="ASSEGNA TRASCRIZIONE" textFill="WHITE" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

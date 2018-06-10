@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="413.0" prefWidth="594.0" style="-fx-background-color: #005c99;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.View.FrontController.SearchOperaController">
+   <children>
+      <AnchorPane layoutX="21.0" layoutY="26.0" prefHeight="366.0" prefWidth="555.0" style="-fx-background-color: #003366; -fx-background-radius: 15 15 15 15;">
+         <children>
+            <JFXTextField fx:id="ricercafield" alignment="CENTER" focusColor="#ffff4d" layoutX="36.0" layoutY="11.0" prefHeight="31.0" prefWidth="443.0" promptText="Effettua una ricerca nel sistema: Inserisci il titolo dell'opera" style="-fx-prompt-text-fill: #ffffff; -fx-text-fill: #ffffff;" unFocusColor="WHITE" />
+            <JFXTextField alignment="CENTER" focusColor="#ffff4d" layoutX="36.0" layoutY="320.0" prefHeight="31.0" prefWidth="76.0" promptText="Autore" style="-fx-prompt-text-fill: #ffffff; -fx-text-fill: #ffffff;" unFocusColor="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField alignment="CENTER" focusColor="#ffff4d" layoutX="135.0" layoutY="320.0" prefHeight="31.0" prefWidth="101.0" promptText="Autore" style="-fx-prompt-text-fill: #ffffff; -fx-text-fill: #ffffff;" text="Genere" unFocusColor="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField alignment="CENTER" focusColor="#ffff4d" layoutX="251.0" layoutY="320.0" prefHeight="31.0" prefWidth="89.0" promptText="Autore" style="-fx-prompt-text-fill: #ffffff; -fx-text-fill: #ffffff;" text="Anno " unFocusColor="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField alignment="CENTER" focusColor="#ffff4d" layoutX="353.0" layoutY="320.0" prefHeight="31.0" prefWidth="101.0" promptText="Autore" style="-fx-prompt-text-fill: #ffffff; -fx-text-fill: #ffffff;" text="Lingua" unFocusColor="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" defaultButton="true" layoutX="492.0" layoutY="14.0" onAction="#SearchOP" prefHeight="34.0" prefWidth="42.0" style="-fx-background-color: transparent; -fx-prompt-text-fill: transparent;" text="CERCA" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="26.0">
+                     <image>
+                        <Image url="@../../Images/icons8_Search_52px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <TableView fx:id="ricercaTable" layoutX="36.0" layoutY="54.0" onKeyPressed="#SetCopertina" onKeyReleased="#SetCopertina" onMouseClicked="#SetCopertina" prefHeight="246.0" prefWidth="342.0" style="-fx-text: nes;">
+               <columns>
+                  <TableColumn fx:id="titolocolumn" prefWidth="128.0" text="Titolo" />
+                  <TableColumn fx:id="autorecolumn" prefWidth="135.0" text="Autore" />
+                  <TableColumn fx:id="annocolumn" prefWidth="87.0" text="Anno" />
+               </columns>
+            </TableView>
+            <Label layoutX="36.0" layoutY="303.0" prefHeight="17.0" prefWidth="112.0" text="Oppure cerca per:" textFill="WHITE" />
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="GRAPHIC_ONLY" layoutX="479.0" layoutY="319.0" prefHeight="31.0" prefWidth="33.0" style="-fx-background-color: #809fff; -fx-prompt-text-fill: transparent;" text="CERCA" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="26.0" fitWidth="26.0">
+                     <image>
+                        <Image url="@../../Images/icons8_Search_52px_1.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="392.0" layoutY="272.0" onAction="#VisualizeOpera" prefHeight="31.0" prefWidth="147.0" style="-fx-background-color: #809fff;" text="VISUALIZZA OPERA" textFill="WHITE" />
+            <Pane layoutX="403.0" layoutY="79.0" prefHeight="163.0" prefWidth="125.0" style="-fx-background-color: #005c99;">
+               <children>
+                  <ImageView fx:id="copertinaimage" fitHeight="150.0" fitWidth="112.0" layoutX="7.0" layoutY="7.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../Images/0401_empty_Darrel_Austin.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="409.0" layoutY="54.0" prefHeight="17.0" prefWidth="112.0" text="Copertina:" textFill="WHITE" />
+         </children></AnchorPane>
+   </children>
+</AnchorPane>

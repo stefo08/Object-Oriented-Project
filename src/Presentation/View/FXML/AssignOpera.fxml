@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="416.0" prefWidth="409.0" style="-fx-background-color: #005c99;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.View.FrontController.AssignOperaController">
+   <children>
+      <Pane layoutX="21.0" layoutY="35.0" prefHeight="366.0" prefWidth="366.0" style="-fx-background-color: #003366; -fx-background-radius: 15 15 15 15;">
+         <children>
+            <TableView fx:id="OperaTable" layoutX="41.0" layoutY="23.0" prefHeight="271.0" prefWidth="286.0">
+               <columns>
+                  <TableColumn fx:id="titcol" prefWidth="285.0" text="Titolo Opera" />
+               </columns>
+            </TableView>
+            <JFXButton layoutX="137.0" layoutY="313.0" onAction="#SelectOpera" prefHeight="25.0" prefWidth="93.0" style="-fx-background-color: #809fff;" text="SELEZIONA" textFill="WHITE" />
+         </children>
+      </Pane>
+      <Label layoutX="140.0" layoutY="4.0" text="SELEZIONA OPERA:" textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

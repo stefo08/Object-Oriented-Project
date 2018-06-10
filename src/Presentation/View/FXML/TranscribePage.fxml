@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextArea?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="442.0" prefWidth="600.0" style="-fx-background-color: #005c99;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.View.FrontController.TranscribePageController">
+   <children>
+      <AnchorPane layoutX="23.0" layoutY="17.0" prefHeight="411.0" prefWidth="555.0" style="-fx-background-color: #003366; -fx-background-radius: 15 15 15 15;">
+         <children>
+            <Pane layoutX="31.0" layoutY="42.0" prefHeight="309.0" prefWidth="217.0" style="-fx-background-color: #005c99;">
+               <children>
+                  <ImageView fx:id="imageview" fitHeight="294.0" fitWidth="200.0" layoutX="9.0" layoutY="8.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../Images/0401_empty_Darrel_Austin.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="193.0" layoutY="1.0" text="TRASCRIZIONE OPERA" textFill="WHITE">
+               <font>
+                  <Font size="17.0" />
+               </font>
+            </Label>
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="62.0" layoutY="366.0" onAction="#ModTrascrition" prefHeight="31.0" prefWidth="156.0" style="-fx-background-color: #809fff;" text="MODIFICA TRASCRIZIONE" textFill="WHITE" />
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="CENTER" layoutX="326.0" layoutY="366.0" onAction="#saveTranscription" prefHeight="31.0" prefWidth="156.0" style="-fx-background-color: #809fff;" text="SALVA TRASCRIZIONE" textFill="WHITE" />
+            <Label layoutX="31.0" layoutY="25.0" text="Pagina:" textFill="WHITE" />
+            <Label layoutX="292.0" layoutY="25.0" text="Trascrizione:" textFill="WHITE" />
+            <Pane layoutX="295.0" layoutY="42.0" prefHeight="309.0" prefWidth="217.0" style="-fx-background-color: #005c99;">
+               <children>
+                  <JFXTextArea fx:id="trascarea" editable="false" focusColor="#e5ff00" layoutX="9.0" layoutY="8.0" prefHeight="288.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" unFocusColor="WHITE" />
+               </children>
+            </Pane>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="413.0" prefWidth="594.0" style="-fx-background-color: #005c99;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.View.FrontController.UploadOperaController">
+   <children>
+      <AnchorPane layoutX="21.0" layoutY="26.0" prefHeight="366.0" prefWidth="555.0" style="-fx-background-color: #003366; -fx-background-radius: 15 15 15 15;">
+         <children>
+            <JFXTextField fx:id="titolofield" alignment="CENTER" focusColor="#ffff4d" layoutX="140.0" layoutY="62.0" prefHeight="31.0" prefWidth="235.0" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="autorfield" alignment="CENTER" focusColor="#ffff4d" layoutX="140.0" layoutY="103.0" prefHeight="31.0" prefWidth="235.0" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="linguafield" alignment="CENTER" focusColor="#ffff4d" layoutX="140.0" layoutY="145.0" prefHeight="31.0" prefWidth="235.0" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="datafield" alignment="CENTER" focusColor="#ffff4d" layoutX="198.0" layoutY="183.0" prefHeight="41.0" prefWidth="179.0" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="isbfield" alignment="CENTER" focusColor="#ffff4d" layoutX="198.0" layoutY="229.0" prefHeight="41.0" prefWidth="179.0" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <JFXTextField fx:id="genfield" alignment="CENTER" focusColor="#ffff4d" layoutX="198.0" layoutY="284.0" prefHeight="31.0" prefWidth="179.0" style="-fx-text-fill: #ffffff;" unFocusColor="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </JFXTextField>
+            <Label layoutX="97.0" layoutY="14.0" text="INSERISCI UNA NUOVA OPERA NEL SISTEMA" textFill="WHITE">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="47.0" layoutY="61.0" prefHeight="53.0" prefWidth="93.0" text="Titolo:" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="47.0" layoutY="103.0" prefHeight="53.0" prefWidth="93.0" text="Autore:" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="47.0" layoutY="145.0" prefHeight="53.0" prefWidth="93.0" text="Lingua:" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="47.0" layoutY="188.0" prefHeight="53.0" prefWidth="139.0" text="Data Pubblicazione:" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <JFXButton layoutX="299.0" layoutY="326.0" onAction="#InsertOP" prefHeight="31.0" prefWidth="228.0" style="-fx-background-color: #809fff;" text="INSERISCI" textFill="WHITE" />
+            <Label layoutX="47.0" layoutY="238.0" prefHeight="41.0" prefWidth="139.0" text="ISBN:" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Label layoutX="47.0" layoutY="273.0" prefHeight="53.0" prefWidth="139.0" text="Genere:" textFill="WHITE">
+               <font>
+                  <Font size="15.0" />
+               </font>
+            </Label>
+            <Pane layoutX="398.0" layoutY="55.0" prefHeight="148.0" prefWidth="129.0" style="-fx-background-color: #005c99;">
+               <children>
+                  <ImageView fx:id="copertina" fitHeight="135.0" fitWidth="112.0" layoutX="9.0" layoutY="6.0" pickOnBounds="true">
+                     <image>
+                        <Image url="@../../Images/0401_empty_Darrel_Austin.jpg" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Label layoutX="398.0" layoutY="29.0" prefHeight="30.0" prefWidth="93.0" text="Copertina:" textFill="WHITE" />
+            <JFXButton layoutX="401.0" layoutY="218.0" onAction="#insertCopertina" prefHeight="27.0" prefWidth="122.0" style="-fx-background-color: #809fff;" text="CARICA COPERTINA" textFill="WHITE">
+               <font>
+                  <Font size="11.0" />
+               </font>
+            </JFXButton>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="392.0" prefWidth="629.0" style="-fx-background-color: #005c99;" xmlns="http://javafx.com/javafx/8.0.141" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Presentation.View.FrontController.InsertPagesController">
+   <children>
+      <AnchorPane layoutX="21.0" layoutY="44.0" prefHeight="322.0" prefWidth="369.0" style="-fx-background-color: #003366; -fx-background-radius: 15 15 15 15;">
+         <children>
+            <Label layoutX="24.0" layoutY="2.0" prefHeight="25.0" prefWidth="108.0" text="Pagine già presenti: " textFill="WHITE" />
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="24.0" layoutY="251.0" onAction="#GetPrecPage" prefHeight="32.0" prefWidth="23.0" style="-fx-background-color: #809fff;" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../../Images/AcceptView/icons8_Left_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <JFXButton contentDisplay="GRAPHIC_ONLY" layoutX="92.0" layoutY="251.0" onAction="#GetNextPage" prefHeight="32.0" prefWidth="23.0" style="-fx-background-color: #809fff;" textFill="WHITE">
+               <graphic>
+                  <ImageView fitHeight="24.0" fitWidth="24.0" pickOnBounds="true" smooth="false">
+                     <image>
+                        <Image url="@../../Images/AcceptView/icons8_Right_24px.png" />
+                     </image>
+                  </ImageView>
+               </graphic>
+            </JFXButton>
+            <Label fx:id="paginanum" layoutX="24.0" layoutY="27.0" prefHeight="15.0" prefWidth="108.0" text="Pagina : " textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <AnchorPane layoutX="407.0" layoutY="44.0" prefHeight="322.0" prefWidth="200.0" style="-fx-background-color: #003366; -fx-background-radius: 15 15 15 15;">
+         <children>
+            <JFXButton layoutX="41.0" layoutY="62.0" onAction="#ExplorerScan" style="-fx-background-color: #809fff;" text="CARICA IMMAGINE" textFill="WHITE" />
+            <JFXButton layoutX="42.0" layoutY="276.0" onAction="#InsertPage" prefHeight="25.0" prefWidth="118.0" style="-fx-background-color: #809fff;" text="INSERISCI" textFill="WHITE" />
+            <Label layoutX="47.0" layoutY="14.0" text="Inserisci numero pagina:" textFill="WHITE">
+               <font>
+                  <Font size="10.0" />
+               </font>
+            </Label>
+            <TextField fx:id="numberfield" layoutX="88.0" layoutY="29.0" prefHeight="25.0" prefWidth="25.0" />
+            <Label layoutX="63.0" layoutY="108.0" prefHeight="25.0" prefWidth="74.0" text="Stato Pagina:" textFill="WHITE" />
+            <Label fx:id="statopag" alignment="CENTER" layoutX="42.0" layoutY="136.0" prefHeight="25.0" prefWidth="119.0" text="Stato" textFill="WHITE" />
+         </children>
+      </AnchorPane>
+      <Label fx:id="operalabel" layoutX="35.0" layoutY="14.0" text="INSERISCI SCANSIONE PAGINA: " textFill="WHITE">
+         <font>
+            <Font size="15.0" />
+         </font>
+      </Label>
+      <Pane layoutX="184.0" layoutY="67.0" prefHeight="276.0" prefWidth="193.0" style="-fx-background-color: #005c99;">
+         <children>
+            <ImageView fx:id="operaimage" fitHeight="262.0" fitWidth="178.0" layoutX="8.0" layoutY="7.0" pickOnBounds="true" smooth="false">
+               <image>
+                  <Image url="@../../Images/0401_empty_Darrel_Austin.jpg" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane layoutX="35.0" layoutY="94.0" prefHeight="192.0" prefWidth="138.0" style="-fx-background-color: #005c99;">
+         <children>
+            <ImageView fx:id="alreadyinside" fitHeight="178.0" fitWidth="119.0" layoutX="9.0" layoutY="7.0" pickOnBounds="true" smooth="false" />
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>
