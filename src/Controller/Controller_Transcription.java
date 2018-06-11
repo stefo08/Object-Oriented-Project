@@ -1,15 +1,17 @@
 package Controller;
 
-import java.io.BufferedReader;
+/*
+ * @author 
+ * Angelo D'Alfonso, Andrea Amicosante, Stefano Ravanetti
+ */
+
 import java.io.File;
-import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.util.List;
-
 import Model.DAO.DAOFactory;
 import Model.DAO.FileSystem;
 import Model.DAO.PageDAO;
@@ -74,58 +76,20 @@ public class Controller_Transcription {
 	
 	/*
 	 * Il Controller della View che permette di effettuare la trascrizione richiedere il testo della trascrizione
-	 * già presente nella Cartella relativa alla pagina il testo contenuto nel file. Il metodo getTranscriptionText
+	 * già presente nella Cartella relativa alla pagina il testo contenuto nel file alla classe FileSystem. Il metodo getTranscriptionText
 	 * prende il path della trascrizione e recupera il testo che viene poi restituito al Controller della View che
 	 * inizializza la TextArea;
 	 */
 	
 	public String getTranscriptionText() {
 		
-		String text = "";
-		BufferedReader br = null;
-		try {
-			br = new BufferedReader(new FileReader(toTranscrib.getTrascr().getPath()));
-			StringBuilder sb = new StringBuilder();
-			String line = br.readLine(); 
-			while (line != null) {
-		        sb.append(line);
-		        sb.append(System.lineSeparator());
-		        line = br.readLine();
-		    }
-			String everything = sb.toString();
-			text = everything;
-		} catch (IOException e) {e.printStackTrace();}
-		finally {
-			try {
-			if (br != null) br.close();
-		} catch (IOException exc) {exc.printStackTrace();}
-		}
-		return text;
+		return FS.getTranscriptionText(toTranscrib);
 		
 	}
 	
 	public String getTranscriptionCompleteText(Page p) {
 		
-		String text = "";
-		BufferedReader br = null;
-		try {
-			br = new BufferedReader(new FileReader(p.getTrascr().getPath()));
-			StringBuilder sb = new StringBuilder();
-			String line = br.readLine(); 
-			while (line != null) {
-		        sb.append(line);
-		        sb.append(System.lineSeparator());
-		        line = br.readLine();
-		    }
-			String everything = sb.toString();
-			text = everything;
-		} catch (IOException e) {e.printStackTrace();}
-		finally {
-			try {
-			if (br != null) br.close();
-		} catch (IOException exc) {exc.printStackTrace();}
-		}
-		return text;
+		return FS.getTranscriptionCompleteText(p);
 		
 	}
 	

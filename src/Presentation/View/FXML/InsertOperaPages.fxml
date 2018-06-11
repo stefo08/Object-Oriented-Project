@@ -27,7 +27,7 @@
                </columns>
             </TableView>
             <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="393.0" layoutY="245.0" onAction="#InsertPage" prefHeight="31.0" prefWidth="147.0" style="-fx-background-color: #809fff; -fx-prompt-text-fill: transparent; -fx-text: 15px;" text="INSERISCI PAGINE&#10;&#10;" textFill="WHITE" />
-            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="394.0" layoutY="292.0" onAction="#CloseUpload" prefHeight="31.0" prefWidth="147.0" style="-fx-background-color: #809fff; -fx-prompt-text-fill: transparent; -fx-text: 15px;" text="CHIUDI UPLOAD&#10;&#10;&#10;" textFill="WHITE" />
+            <JFXButton alignment="CENTER" buttonType="RAISED" contentDisplay="TOP" layoutX="394.0" layoutY="292.0" onAction="#CloseOperaUpload" prefHeight="31.0" prefWidth="147.0" style="-fx-background-color: #809fff; -fx-prompt-text-fill: transparent; -fx-text: 15px;" text="CHIUDI UPLOAD&#10;&#10;&#10;" textFill="WHITE" />
             <Pane layoutX="395.0" layoutY="59.0" prefHeight="170.0" prefWidth="140.0" style="-fx-background-color: #005c99;">
                <children>
                   <ImageView fx:id="copertina" fitHeight="158.0" fitWidth="127.0" layoutX="6.0" layoutY="6.0" pickOnBounds="true">

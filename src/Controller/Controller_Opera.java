@@ -1,5 +1,10 @@
 package Controller;
 
+/*
+ * @author 
+ * Angelo D'Alfonso, Andrea Amicosante, Stefano Ravanetti
+ */
+
 import java.io.File;
 import java.net.MalformedURLException;
 import java.util.ArrayList;

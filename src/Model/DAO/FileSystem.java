@@ -5,14 +5,17 @@ package Model.DAO;
  * Angelo D'Alfonso, Andrea Amicosante, Stefano Ravanetti
  */
 
+import java.io.BufferedReader;
+
 import java.io.File;
+import java.io.FileReader;
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.nio.file.StandardCopyOption;
-
 import Model.VO.Opera;
+import Model.VO.Page;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Alert.AlertType;
 
@@ -32,7 +35,7 @@ public class FileSystem {
  public void CreateOperaDirectory(String tit){
 	
 	try {
-	String url = "C:/Users/angel/Desktop/Opere/" + tit +"/";
+	String url = System.getProperty("user.home") +"/Desktop/Opere/" + tit +"/";
 	Path path = (Path) Paths.get(url);
 	   if (!Files.exists(path)) {
 		Files.createDirectory(path);
@@ -56,7 +59,7 @@ public class FileSystem {
 	    Files.copy(f.toPath(),
 	    		(new File(path + "Pagina" +n +".jpg")).toPath(),
 	    		StandardCopyOption.REPLACE_EXISTING);
-	    String url = "C:/Users/angel/Desktop/Opere/" + op.getTitolo() + "/Trascrizione" +n +".txt";
+	    String url = System.getProperty("user.home") +"/Desktop/Opere/" + op.getTitolo() + "/Trascrizione" +n +".txt";
 		Path pathtra = (Path) Paths.get(url);
 		if (!(Files.exists(pathtra))){
 			Files.createFile(pathtra);
@@ -112,6 +115,56 @@ public class FileSystem {
 				+ "riprovare");
 		alert.showAndWait();}
  }
+ 
+ public String getTranscriptionCompleteText(Page p) {
+		
+		String text = "";
+		BufferedReader br = null;
+		try {
+			br = new BufferedReader(new FileReader(p.getTrascr().getPath()));
+			StringBuilder sb = new StringBuilder();
+			String line = br.readLine(); 
+			while (line != null) {
+		        sb.append(line);
+		        sb.append(System.lineSeparator());
+		        line = br.readLine();
+		    }
+			String everything = sb.toString();
+			text = everything;
+		} catch (IOException e) {e.printStackTrace();}
+		finally {
+			try {
+			if (br != null) br.close();
+		} catch (IOException exc) {exc.printStackTrace();}
+		}
+		return text;
+		
+	}
+ 
+ public String getTranscriptionText(Page toTranscrib) {
+		
+		String text = "";
+		BufferedReader br = null;
+		try {
+			br = new BufferedReader(new FileReader(toTranscrib.getTrascr().getPath()));
+			StringBuilder sb = new StringBuilder();
+			String line = br.readLine(); 
+			while (line != null) {
+		        sb.append(line);
+		        sb.append(System.lineSeparator());
+		        line = br.readLine();
+		    }
+			String everything = sb.toString();
+			text = everything;
+		} catch (IOException e) {e.printStackTrace();}
+		finally {
+			try {
+			if (br != null) br.close();
+		} catch (IOException exc) {exc.printStackTrace();}
+		}
+		return text;
+		
+	}
  
  }
 

@@ -1,5 +1,10 @@
 package Controller;
 
+/*
+ * @author 
+ * Angelo D'Alfonso, Andrea Amicosante, Stefano Ravanetti
+ */
+
 import java.util.List;
 
 import Model.DAO.DAOFactory;

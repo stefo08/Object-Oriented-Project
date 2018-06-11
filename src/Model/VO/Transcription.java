@@ -1,5 +1,10 @@
 package Model.VO;
 
+/*
+ * @author 
+ * Angelo D'Alfonso, Andrea Amicosante, Stefano Ravanetti
+ */
+
 public class Transcription {
 	
 	private String path;

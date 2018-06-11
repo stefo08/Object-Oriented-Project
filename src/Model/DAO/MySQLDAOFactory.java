@@ -1,5 +1,10 @@
 package Model.DAO;
 
+/*
+ * @author 
+ * Angelo D'Alfonso, Andrea Amicosante, Stefano Ravanetti
+ */
+
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;

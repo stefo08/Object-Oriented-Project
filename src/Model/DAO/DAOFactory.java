@@ -1,5 +1,10 @@
 package Model.DAO;
 
+/*
+ * @author 
+ * Angelo D'Alfonso, Andrea Amicosante, Stefano Ravanetti
+ */
+
 public abstract class DAOFactory {
 	
 	public static final int MYSQL = 0;
