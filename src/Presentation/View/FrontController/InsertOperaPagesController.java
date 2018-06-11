@@ -120,13 +120,5 @@ public class InsertOperaPagesController implements Initializable {
      * L'Uploader decide che l'inseriemento delle pagine è completato. L'opera assume lo stato "Upload Chiuso"
      * Il revisore degli Upload può così revisionare le scansioni;
      */
-    
-    @FXML
-    private void CloseUpload() {
     	
-    	Opera toclose = opereUP.getSelectionModel().getSelectedItem();
-    	controp.CloseOperaUpload(toclose);
-    	
-    }
-	
 }
