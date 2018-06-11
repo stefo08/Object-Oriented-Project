@@ -40,7 +40,7 @@ public class LoginController implements Initializable {
 	/*
 	 * Quando il punsante di Login viene premuto nella View il controller_User
 	 * verifica che i campi User e Pass non siano vuoti (Mostra messaggio di errore) 
-	 * e se cosi non è allora interroga i DB e verifica l'esistenza dell'utente
+	 * e se cosi non è allora interroga il DB e verifica l'esistenza dell'utente
 	 * nel sistema
 	 */
 	
